@@ -1,0 +1,628 @@
+fileFormatVersion: 2
+guid: c090485898edb054abfc296ee0d380ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6700967695819434914
+    second: Smart_Enemy_Idle1
+  - first:
+      213: -4278276266772176862
+    second: Smart_Enemy_Idle2
+  - first:
+      213: 5820221200526231892
+    second: Smart_Enemy_Idle3
+  - first:
+      213: -1412072019132494250
+    second: Smart_Enemy_Idle4
+  - first:
+      213: -2718621219983552981
+    second: Smart_Enemy_Walking1
+  - first:
+      213: -1313218222076662656
+    second: Smart_Enemy_Walking2
+  - first:
+      213: 8350879023563838077
+    second: Smart_Enemy_Walking3
+  - first:
+      213: 3673237592877144257
+    second: Smart_Enemy_Walking4
+  - first:
+      213: 1989865662991068456
+    second: Smart_Enemy_Death1
+  - first:
+      213: -2073473863763267510
+    second: Smart_Enemy_Death2
+  - first:
+      213: -9021789352545408883
+    second: Smart_Enemy_Death3
+  - first:
+      213: 6366888965594479890
+    second: Smart_Enemy_Death4
+  - first:
+      213: 573224537316338667
+    second: Smart_Enemy_Death5
+  - first:
+      213: -3643234747044205279
+    second: Smart_Enemy_Death6
+  - first:
+      213: -8942563854184520443
+    second: Smart_Enemy_Death7
+  - first:
+      213: 8514377955205023708
+    second: Smart_Enemy_Death8
+  - first:
+      213: 8982599185597368538
+    second: Smart_GroundEnemy_16
+  - first:
+      213: 3896591656583415689
+    second: Smart_GroundEnemy_17
+  - first:
+      213: -12072432739830939
+    second: Smart_GroundEnemy_18
+  - first:
+      213: 5024383906122035274
+    second: Smart_Enemy_0
+  - first:
+      213: -384714691657151848
+    second: Smart_Enemy_1
+  - first:
+      213: -6235729768102594613
+    second: Smart_Enemy_2
+  - first:
+      213: 2121195238224942020
+    second: Smart_Enemy_3
+  - first:
+      213: 8268871913097117213
+    second: Smart_Enemy_4
+  - first:
+      213: 8567686536280219346
+    second: Smart_Enemy_5
+  - first:
+      213: 4954659101858829539
+    second: Smart_Enemy_6
+  - first:
+      213: 5436451574504559746
+    second: Smart_Enemy_7
+  - first:
+      213: -3011684000198421588
+    second: Smart_Enemy_8
+  - first:
+      213: 4198181464514094928
+    second: Smart_Enemy_9
+  - first:
+      213: 3061298474733716230
+    second: Smart_Enemy_10
+  - first:
+      213: 7104232009561005889
+    second: Smart_Enemy_11
+  - first:
+      213: 4471998314604947017
+    second: Smart_Enemy_12
+  - first:
+      213: 1770315870116660984
+    second: Smart_Enemy_13
+  - first:
+      213: 2448301858285379284
+    second: Smart_Enemy_14
+  - first:
+      213: -7925929416156029871
+    second: Smart_Enemy_15
+  - first:
+      213: 4839264979445281374
+    second: Smart_Enemy_16
+  - first:
+      213: -4579282540140432804
+    second: Smart_Enemy_17
+  - first:
+      213: -2414747383848104392
+    second: Smart_Enemy_18
+  - first:
+      213: 1296087651901622734
+    second: Smart_Enemy_19
+  - first:
+      213: 9123904123723652887
+    second: Smart_Enemy_20
+  - first:
+      213: 4487915683755155013
+    second: Smart_Enemy_21
+  - first:
+      213: -4581716099571447591
+    second: Smart_Enemy_22
+  - first:
+      213: 6704436404180786714
+    second: Smart_Enemy_23
+  - first:
+      213: -7759184966941755674
+    second: Smart_Enemy_24
+  - first:
+      213: -1354367770389391874
+    second: Smart_Enemy_25
+  - first:
+      213: -5875296616919305745
+    second: Smart_Enemy_26
+  - first:
+      213: -3760344395400235957
+    second: Smart_Enemy_27
+  - first:
+      213: -3374155661057645323
+    second: Smart_Enemy_28
+  - first:
+      213: -3665607033175047717
+    second: Smart_Enemy_29
+  - first:
+      213: -1674642429229198537
+    second: Smart_Enemy_30
+  - first:
+      213: 7341318939478191025
+    second: Smart_Enemy_31
+  - first:
+      213: 6545401945768015411
+    second: Smart_Enemy_32
+  - first:
+      213: 7265183238888608941
+    second: Smart_Enemy_33
+  - first:
+      213: -6695675179953587220
+    second: Smart_Enemy_34
+  - first:
+      213: -1306318233110618403
+    second: Smart_Enemy_35
+  - first:
+      213: 4907028736263982492
+    second: Smart_Enemy_36
+  - first:
+      213: -6913657701772681857
+    second: Smart_Enemy_37
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Smart_Enemy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40f793da823ab540800000000000000
+      internalID: 5024383906122035274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 80
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ac6e7b60839aaf0800000000000000
+      internalID: -384714691657151848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc77ae070dc3679a0800000000000000
+      internalID: -6235729768102594613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 80
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3d5a1a4dfff6d10800000000000000
+      internalID: 2121195238224942020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ebb51d13fe0c270800000000000000
+      internalID: 8268871913097117213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de11edd28986e670800000000000000
+      internalID: 8567686536280219346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 40
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e49375c33c72c440800000000000000
+      internalID: 4954659101858829539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 40
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28415f847e7227b40800000000000000
+      internalID: 5436451574504559746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca31270cb595436d0800000000000000
+      internalID: -3011684000198421588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_9
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057edfe8ccfe24a30800000000000000
+      internalID: 4198181464514094928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603c2f94ebaeb7a20800000000000000
+      internalID: 3061298474733716230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14fd7d37f5d479260800000000000000
+      internalID: 7104232009561005889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9466c2206cabf0e30800000000000000
+      internalID: 4471998314604947017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_13
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f64a8287ec619810800000000000000
+      internalID: 1770315870116660984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de5706819d1af120800000000000000
+      internalID: 2448301858285379284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Smart_Enemy_15
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c533b7031710290800000000000000
+      internalID: -7925929416156029871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
