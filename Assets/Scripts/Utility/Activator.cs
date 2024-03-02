@@ -1,21 +1,18 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Handles object activation/deactivation
-/// </summary>
 public class Activator : MonoBehaviour
 {
     [Tooltip("Objects to be affected")]
     [SerializeField] private List<GameObject> targetObjects = new List<GameObject>();
+    [Tooltip("How to affect the objects")]
+    [SerializeField] private ObjectsAction objectsAction;
+
     private enum ObjectsAction
     {
         activateObjects,
         deactivateObjects
     }
-    [Tooltip("How to affect the objects")]
-    [SerializeField] private ObjectsAction objectsAction;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -33,7 +30,7 @@ public class Activator : MonoBehaviour
     }
     
     /// <summary>
-    /// Activates/deactivates the given object
+    /// Activates/deactivates the given object.
     /// </summary>
     private void AffectObjects()
     {
@@ -41,7 +38,8 @@ public class Activator : MonoBehaviour
         {
             foreach(GameObject targetObject in targetObjects)
             {
-                targetObject.SetActive(true);
+                if (targetObject != null)
+                    targetObject.SetActive(true);
             }
         }
 
@@ -49,7 +47,8 @@ public class Activator : MonoBehaviour
         {
             foreach (GameObject targetObject in targetObjects)
             {
-                targetObject.SetActive(false);
+                if (targetObject != null)
+                    targetObject.SetActive(false);
             }
         }
     }

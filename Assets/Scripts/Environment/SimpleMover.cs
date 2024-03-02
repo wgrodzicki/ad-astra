@@ -1,131 +1,124 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
-
-/// <summary>
-/// Moves object between to (and from) a position on axes
-/// </summary>
 public class SimpleMover : MonoBehaviour
 {
     [Header("X axis")]
-    [Tooltip("Whether the object should move in the X axis")][SerializeField]
-    private bool moveX = false;
-    [Tooltip("Movement speed on the X axis")][SerializeField]
-    private float speedX = 0.0f;
-    [Tooltip("Whether speed on the X axis should be randomly set between 0.1 and speedX")][SerializeField]
-    private bool randomSpeedX = false;
-    [Tooltip("How far should the object move on the X axis")][SerializeField]
-    private float distanceX = 0.0f;
-    [Tooltip("Whether distance on the X axis should be randomly set between 0.1 and distanceX")][SerializeField]
-    private bool randomDistanceX = false;
-    [Tooltip("Whether the object should go back after reaching distanceX")][SerializeField]
-    private bool boomerangX = false;
-    [Tooltip("How long should the object wait before going back after reaching distanceX")][SerializeField]
-    private float intervalX = 0.0f;
-    [Tooltip("Whether interval should be randomly set between 0.1 and intervalX")][SerializeField]
-    private bool randomIntervalX = false;
-    [Tooltip("Delay before movement on the X axis starts")][SerializeField]
-    private float delayX = 0.0f;
-    [Tooltip("Whether delay should be randomly set between 0.1 and delayX")][SerializeField]
-    private bool randomDelayX = false;
+    [Tooltip("Whether the object should move in the X axis")]
+    [SerializeField] private bool moveX = false;
+    [Tooltip("Movement speed on the X axis")]
+    [SerializeField] private float speedX = 0.0f;
+    [Tooltip("Whether speed on the X axis should be randomly set between 0.1 and speedX")]
+    [SerializeField] private bool randomSpeedX = false;
+    [Tooltip("How far should the object move on the X axis")]
+    [SerializeField] private float distanceX = 0.0f;
+    [Tooltip("Whether distance on the X axis should be randomly set between 0.1 and distanceX")]
+    [SerializeField] private bool randomDistanceX = false;
+    [Tooltip("Whether the object should go back after reaching distanceX")]
+    [SerializeField] private bool boomerangX = false;
+    [Tooltip("How long should the object wait before going back after reaching distanceX")]
+    [SerializeField] private float intervalX = 0.0f;
+    [Tooltip("Whether interval should be randomly set between 0.1 and intervalX")]
+    [SerializeField] private bool randomIntervalX = false;
+    [Tooltip("Delay before movement on the X axis starts")]
+    [SerializeField] private float delayX = 0.0f;
+    [Tooltip("Whether delay should be randomly set between 0.1 and delayX")]
+    [SerializeField] private bool randomDelayX = false;
+
+    [Header("Y axis")]
+    [Tooltip("Whether the object should move in the Y axis")]
+    [SerializeField] private bool moveY = false;
+    [Tooltip("Movement speed on the Y axis")]
+    [SerializeField] private float speedY = 0.0f;
+    [Tooltip("Whether speed on the Y axis should be randomly set between 0.1 and speedY")]
+    [SerializeField] private bool randomSpeedY = false;
+    [Tooltip("How far should the object move on the Y axis")]
+    [SerializeField] private float distanceY = 0.0f;
+    [Tooltip("Whether distance on the Y axis should be randomly set between 0.1 and distanceY")]
+    [SerializeField] private bool randomDistanceY = false;
+    [Tooltip("Whether the object should go back after reaching distanceY")]
+    [SerializeField] private bool boomerangY = false;
+    [Tooltip("How long should the object wait before going back after reaching distanceY")]
+    [SerializeField] private float intervalY = 0.0f;
+    [Tooltip("Whether interval should be randomly set between 0.1 and intervalY")]
+    [SerializeField] private bool randomIntervalY = false;
+    [Tooltip("Delay before movement on the Y axis starts")]
+    [SerializeField] private float delayY = 0.0f;
+    [Tooltip("Whether delay should be randomly set between 0.1 and delayY")]
+    [SerializeField] private bool randomDelayY = false;
+
+    [Header("Z axis")]
+    [Tooltip("Whether the object should move in the Z axis")]
+    [SerializeField] private bool moveZ = false;
+    [Tooltip("Movement speed on the Z axis")]
+    [SerializeField] private float speedZ = 0.0f;
+    [Tooltip("Whether speed on the Z axis should be randomly set between 0.1 and speedZ")]
+    [SerializeField] private bool randomSpeedZ = false;
+    [Tooltip("How far should the object move on the Z axis")]
+    [SerializeField] private float distanceZ = 0.0f;
+    [Tooltip("Whether distance on the Z axis should be randomly set between 0.1 and distanceZ")]
+    [SerializeField] private bool randomDistanceZ = false;
+    [Tooltip("Whether the object should go back after reaching distanceZ")]
+    [SerializeField] private bool boomerangZ = false;
+    [Tooltip("How long should the object wait before going back after reaching distanceZ")]
+    [SerializeField] private float intervalZ = 0.0f;
+    [Tooltip("Whether interval should be randomly set between 0.1 and intervalZ")]
+    [SerializeField] private bool randomIntervalZ = false;
+    [Tooltip("Delay before movement on the Z axis starts")]
+    [SerializeField] private float delayZ = 0.0f;
+    [Tooltip("Whether delay should be randomly set between 0.1 and delayZ")]
+    [SerializeField] private bool randomDelayZ = false;
 
     public bool GetMoveX()
     {
         return moveX;
     }
+
     public void SetMoveX(bool value)
     {
         moveX = value;
     }
 
-    [Header("Y axis")]
-    [Tooltip("Whether the object should move in the Y axis")][SerializeField]
-    private bool moveY = false;
-    [Tooltip("Movement speed on the Y axis")][SerializeField]
-    private float speedY = 0.0f;
-    [Tooltip("Whether speed on the Y axis should be randomly set between 0.1 and speedY")][SerializeField]
-    private bool randomSpeedY = false;
-    [Tooltip("How far should the object move on the Y axis")][SerializeField]
-    private float distanceY = 0.0f;
-    [Tooltip("Whether distance on the Y axis should be randomly set between 0.1 and distanceY")][SerializeField]
-    private bool randomDistanceY = false;
-    [Tooltip("Whether the object should go back after reaching distanceY")][SerializeField]
-    private bool boomerangY = false;
-    [Tooltip("How long should the object wait before going back after reaching distanceY")][SerializeField]
-    private float intervalY = 0.0f;
-    [Tooltip("Whether interval should be randomly set between 0.1 and intervalY")]
-    [SerializeField]
-    private bool randomIntervalY = false;
-    [Tooltip("Delay before movement on the Y axis starts")][SerializeField]
-    private float delayY = 0.0f;
-    [Tooltip("Whether delay should be randomly set between 0.1 and delayY")][SerializeField]
-    private bool randomDelayY = false;
-
     public bool GetMoveY()
     {
         return moveY;
     }
+
     public void SetMoveY(bool value)
     {
         moveY = value;
     }
 
-    [Header("Z axis")]
-    [Tooltip("Whether the object should move in the Z axis")][SerializeField]
-    private bool moveZ = false;
-    [Tooltip("Movement speed on the Z axis")][SerializeField]
-    private float speedZ = 0.0f;
-    [Tooltip("Whether speed on the Z axis should be randomly set between 0.1 and speedZ")][SerializeField]
-    private bool randomSpeedZ = false;
-    [Tooltip("How far should the object move on the Z axis")][SerializeField]
-    private float distanceZ = 0.0f;
-    [Tooltip("Whether distance on the Z axis should be randomly set between 0.1 and distanceZ")][SerializeField]
-    private bool randomDistanceZ = false;
-    [Tooltip("Whether the object should go back after reaching distanceZ")][SerializeField]
-    private bool boomerangZ = false;
-    [Tooltip("How long should the object wait before going back after reaching distanceZ")][SerializeField]
-    private float intervalZ = 0.0f;
-    [Tooltip("Whether interval should be randomly set between 0.1 and intervalZ")][SerializeField]
-    private bool randomIntervalZ = false;
-    [Tooltip("Delay before movement on the Z axis starts")][SerializeField]
-    private float delayZ = 0.0f;
-    [Tooltip("Whether delay should be randomly set between 0.1 and delayZ")][SerializeField]
-    private bool randomDelayZ = false;
-
     public bool GetMoveZ()
     {
         return moveZ;
     }
+
     public void SetMoveZ(bool value)
     {
         moveZ = value;
     }
 
-    AxisMover axisX;
-    AxisMover axisY;
-    AxisMover axisZ;
+    private AxisMover axisX;
+    private AxisMover axisY;
+    private AxisMover axisZ;
 
     private bool startX = false;
     private bool startY = false;
     private bool startZ = false;
-
 
     private void Start()
     {
         SetInitialValues();
     }
 
-
     void Update()
     {
         Move();
     }
 
-
     /// <summary>
-    /// Sets initial movement values
+    /// Sets initial movement values.
     /// </summary>
     private void SetInitialValues()
     {
@@ -155,7 +148,6 @@ public class SimpleMover : MonoBehaviour
             {
                 delayX = Random.Range(0.1f, delayX);
             }
-            // Instantiate X axis object
             axisX = new AxisMover(this.gameObject, this.gameObject.transform.position.x, new Vector3(speedX, 0.0f, 0.0f), distanceX, boomerangX, intervalX);
         }
 
@@ -185,7 +177,6 @@ public class SimpleMover : MonoBehaviour
             {
                 delayY = Random.Range(0.1f, delayY);
             }
-            // Instantiate Y axis object
             axisY = new AxisMover(this.gameObject, this.gameObject.transform.position.y, new Vector3(0.0f, speedY, 0.0f), distanceY, boomerangY, intervalY);
         }
 
@@ -215,14 +206,12 @@ public class SimpleMover : MonoBehaviour
             {
                 delayZ = Random.Range(0.1f, delayZ);
             }
-            // Instantiate Z axis object
             axisZ = new AxisMover(this.gameObject, this.gameObject.transform.position.z, new Vector3(0.0f, 0.0f, speedZ), distanceZ, boomerangZ, intervalZ);
         }
     }
 
-
     /// <summary>
-    /// Handles movement on axes
+    /// Handles movement on axes.
     /// </summary>
     private void Move()
     {
@@ -254,9 +243,8 @@ public class SimpleMover : MonoBehaviour
         }
     }
 
-
     /// <summary>
-    /// Delays the start of the movement
+    /// Delays the start of the movement.
     /// </summary>
     /// <param name="delay"></param>
     /// <param name="axis"></param>
@@ -281,9 +269,8 @@ public class SimpleMover : MonoBehaviour
         }
     }
 
-
     /// <summary>
-    /// Represents movement on an axis
+    /// Represents movement on an axis.
     /// </summary>
     class AxisMover
     {
@@ -313,9 +300,8 @@ public class SimpleMover : MonoBehaviour
             this.interval = interval;
         }
 
-
         /// <summary>
-        /// Moves on the axis
+        /// Moves on the axis.
         /// </summary>
         /// <param name="currentPosition"></param>
         public void MoveOnAxis(float currentPosition)
@@ -368,9 +354,8 @@ public class SimpleMover : MonoBehaviour
             }
         }
 
-
         /// <summary>
-        /// Handles direction change if current position is greater or equal to the end positon
+        /// Handles direction change if current position is greater or equal to the end positon.
         /// </summary>
         /// <param name="currentPosition"></param>
         /// <param name="endPosition"></param>
@@ -390,9 +375,8 @@ public class SimpleMover : MonoBehaviour
             }
         }
 
-
         /// <summary>
-        /// Handles direction change if current position is smaller than end positon
+        /// Handles direction change if current position is smaller than end positon.
         /// </summary>
         /// <param name="currentPosition"></param>
         /// <param name="endPosition"></param>
@@ -412,9 +396,8 @@ public class SimpleMover : MonoBehaviour
             }
         }
 
-
         /// <summary>
-        /// Changes movement direction
+        /// Changes movement direction.
         /// </summary>
         private void ChangeDirection()
         {
@@ -432,9 +415,8 @@ public class SimpleMover : MonoBehaviour
             }
         }
 
-
         /// <summary>
-        /// Stops movement for the given time interval
+        /// Stops movement for the given time interval.
         /// </summary>
         /// <returns></returns>
         private bool IntervalTimer()

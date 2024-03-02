@@ -1,27 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Triggers instant tilting of the associated waypoint mover on contact with the specific object
-/// </summary>
 public class InstantTiltTrigger : MonoBehaviour
 {
     [Tooltip("Associated waypoint mover, e.g. platform")]
-    public WaypointMover waypointMoverScript;
+    [SerializeField] private WaypointMover waypointMoverScript;
     [Tooltip("Objects that should be detected by the collider")]
-    public string tagToLookFor;
+    [SerializeField] private string tagToLookFor;
 
     private Collider2D targetCollider = null;
 
-    void Update()
+    private void Update()
     {
         StraightenObjectOnFullTilt();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        // Check for match
         if (collider.tag == tagToLookFor)
         {
             targetCollider = collider;
@@ -31,7 +25,7 @@ public class InstantTiltTrigger : MonoBehaviour
     }
 
     /// <summary>
-    /// Straightens the object when tilting is finished
+    /// Straightens the object when tilting is finished.
     /// </summary>
     private void StraightenObjectOnFullTilt()
     {

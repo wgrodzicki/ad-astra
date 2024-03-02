@@ -1,24 +1,23 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Allows the object to be shifted by the player
-/// </summary>
 public class MovableSquareShifter : MonoBehaviour
 {
     [Tooltip("Input manager script")]
-    public InputManager inputManager;
+    [SerializeField] private InputManager inputManager;
     [Tooltip("How much should this object be shifted")]
-    public float shiftMagnitude = 0.0f;
+    [SerializeField] private float shiftMagnitude = 0.0f;
     [Tooltip("Delay before the next shift in a row is allowed")]
-    public float timeToNextShift = 0.0f;
+    [SerializeField] private float timeToNextShift = 0.0f;
     [Tooltip("How many collisions should be allowed when raycasting to check if there is enough space for the shift")]
-    public int collisionsAllowed = 4;
+    [SerializeField] private int collisionsAllowed = 4;
+    
     // Collider data from the trigger
     private Collider2D colliderToShift;
+    
     // Whether shifting should be allowed at all (when triggered)
     private bool canShift = false;
+    
     // Whether another shift in a row should be allowed (while still in the trigger)
     private bool canShiftAgain = false;
     
@@ -35,7 +34,6 @@ public class MovableSquareShifter : MonoBehaviour
         }
 
         colliderToShift = collider;
-        // Allow shifting
         canShift = true;
         canShiftAgain = true;
     }
@@ -48,13 +46,12 @@ public class MovableSquareShifter : MonoBehaviour
         }
 
         colliderToShift = null;
-        // Forbid shifting
         canShift = false;
         canShiftAgain = false;
     }
 
     /// <summary>
-    /// Shifts the object on player input
+    /// Shifts the object on player input.
     /// </summary>
     private void Shift()
     {
@@ -122,10 +119,10 @@ public class MovableSquareShifter : MonoBehaviour
     }
 
     /// <summary>
-    /// Handles the delay before the next shift in a row is allowed
+    /// Handles the delay before the next shift in a row is allowed.
     /// </summary>
     /// <returns></returns>
-    IEnumerator WaitForNextShift()
+    private IEnumerator WaitForNextShift()
     {
         yield return new WaitForSeconds(timeToNextShift);
         canShiftAgain = true;

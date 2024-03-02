@@ -1,26 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
-/// <summary>
-/// Restores normal gravity and color to the player
-/// </summary>
 public class NormalGravity : MonoBehaviour
 {
     [Tooltip("Player Controller script")]
-    public PlayerController playerController;
+    [SerializeField] private PlayerController playerController;
     [Tooltip("Text to be displayed when exiting the zone")]
-    public GameObject textExit;
+    [SerializeField] private GameObject textExit;
     [Tooltip("UI Manager script")]
-    [SerializeField] UIManager interfaceManagerScript;
+    [SerializeField] private UIManager interfaceManagerScript;
 
     private void Update()
     {
         CheckPause();
     }
 
-    void OnTriggerEnter2D(Collider2D collission)
+    private void OnTriggerEnter2D(Collider2D collission)
     {
         if (collission.tag != "Player")
         {
@@ -40,7 +34,7 @@ public class NormalGravity : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D collission)
+    private void OnTriggerExit2D(Collider2D collission)
     {   
         if (collission.tag != "Player")
         {
@@ -55,7 +49,7 @@ public class NormalGravity : MonoBehaviour
     }
 
     /// <summary>
-    /// Turns the text off if game is paused
+    /// Turns the text off if game is paused.
     /// </summary>
     private void CheckPause()
     {
@@ -65,15 +59,15 @@ public class NormalGravity : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Cancels the extra gravity effect.
+    /// </summary>
+    /// <param name="collission"></param>
     public void RestoreNormalGravity(Collider2D collission)
     {
-        // Enable jumping
         playerController.allowedJumps = playerController.defaultJumpsAllowed;
-
-        // Restore speed
         playerController.movementSpeed = playerController.defaultSpeed;
         
-        // Get the sprite renderer
         Component[] spriteRenderers = collission.GetComponentsInChildren<SpriteRenderer>();
 
         foreach (SpriteRenderer spriteRenderer in spriteRenderers)

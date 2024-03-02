@@ -1,11 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Handles boss-specific behaviour
-/// </summary>
 public class BossController : Health
 {
     [Header("Boss-specific")]
@@ -24,13 +19,11 @@ public class BossController : Health
     [Tooltip("UI Manager script")]
     [SerializeField] UIManager interfaceManagerScript;
 
-
     /// <summary>
-    /// Makes sure the loot is always dropped
+    /// Makes sure the loot is always dropped.
     /// </summary>
     public override void DropLoot()
     {
-        // Check if there is loot to be dropped
         if (basicLoot == null)
         {
             return;

@@ -1,23 +1,20 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class BossHeartController : MonoBehaviour
 {
-    [Tooltip("Input manager script")][SerializeField]
-    private InputManager inputManager;
-    [Tooltip("Main boss object")][SerializeField]
-    private GameObject boss;
-    [Tooltip("Boss hit effect")][SerializeField]
-    private GameObject bossHitEffect;
-    [Tooltip("Heart color after deactivation")][SerializeField]
-    private Color deactivationColor = Color.white;
+    [Tooltip("Input manager script")]
+    [SerializeField] private InputManager inputManager;
+    [Tooltip("Main boss object")]
+    [SerializeField] private GameObject boss;
+    [Tooltip("Boss hit effect")]
+    [SerializeField] private GameObject bossHitEffect;
+    [Tooltip("Heart color after deactivation")]
+    [SerializeField] private Color deactivationColor = Color.white;
 
     private List<GameObject> bossAuras;
     private bool heartDeactivated = false;
     private bool heartInteractible = false;
-
 
     private void Start()
     {
@@ -59,6 +56,9 @@ public class BossHeartController : MonoBehaviour
         heartInteractible = false;
     }
 
+    /// <summary>
+    /// Activates the heart.
+    /// </summary>
     private void ActivateHeart()
     {
         if (heartDeactivated)

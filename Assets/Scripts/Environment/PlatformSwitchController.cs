@@ -1,20 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Controls the hiding/showing of the switch
-/// </summary>
 public class PlatformSwitchController : MonoBehaviour
 {
     [Tooltip("Input manager script")]
-    public InputManager inputManager;
-
+    [SerializeField] private InputManager inputManager;
     [Tooltip("Script in the controlled platform to be accessed by this switch")]
-    public WaypointMover platformMoverScript;
+    [SerializeField] private WaypointMover platformMoverScript;
+    [Tooltip("Switch spatial orientation")]
+    [SerializeField] private Orientation orientation;
+    [Tooltip("How quickly the switch moves")]
+    [SerializeField] private float movingSpeed = 0.0f;
+    [Tooltip("How far should the switch hide relative to its length")]
+    [SerializeField] private float hideDepth = 0.5f;
+    [Tooltip("Whether the switch should return to the default position immediately after activation")]
+    [SerializeField] private bool returns = false;
+    [Tooltip("Switch sound effect")]
+    [SerializeField] private GameObject switchEffect;
 
-    // Switch orientation
-    public enum Orientation
+    private enum Orientation
     {
         verticalBottom,
         verticalTop,
@@ -22,22 +25,7 @@ public class PlatformSwitchController : MonoBehaviour
         horizontalRight
     }
 
-    [Tooltip("Switch spatial orientation")]
-    public Orientation orientation;
-
-    [Tooltip("How quickly the switch moves")]
-    public float movingSpeed = 0.0f;
-
-    [Tooltip("How far should the switch hide relative to its length")]
-    public float hideDepth = 0.5f;
-
-    [Tooltip("Whether the switch should return to the default position immediately after activation")]
-    public bool returns = false;
-
-    [Tooltip("Switch sound effect")]
-    public GameObject switchEffect;
-
-    // Switch's length
+    // Switch length
     private float length = 0.0f;    
 
     // How far has the switch moved
@@ -53,13 +41,12 @@ public class PlatformSwitchController : MonoBehaviour
     private bool shouldHide = false;
     private bool shouldShow = false;
 
-    void Start()
+    private void Start()
     {
-        // Get the length of the switch
         length = this.gameObject.transform.localScale.y;
     }
 
-    void Update()
+    private void Update()
     {
         CheckInput();
         CheckIfReady();
@@ -68,7 +55,7 @@ public class PlatformSwitchController : MonoBehaviour
     }
     
     /// <summary>
-    /// Checks for user input (action key)
+    /// Checks for user input (action key).
     /// </summary>
     private void CheckInput()
     {
@@ -84,7 +71,7 @@ public class PlatformSwitchController : MonoBehaviour
     }
 
     /// <summary>
-    /// Checks if switch is ready to be used
+    /// Checks if the switch is ready to be used.
     /// </summary>
     private void CheckIfReady()
     {
@@ -126,6 +113,9 @@ public class PlatformSwitchController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Hides the switch.
+    /// </summary>
     private void HideSwitch()
     {
         if (platformMoverScript == null)
@@ -174,6 +164,9 @@ public class PlatformSwitchController : MonoBehaviour
         distanceDown += movingSpeed;
     }
 
+    /// <summary>
+    /// Shows the switch.
+    /// </summary>
     private void ShowSwitch()
     {
         if (platformMoverScript == null)
@@ -217,9 +210,8 @@ public class PlatformSwitchController : MonoBehaviour
         distanceUp += movingSpeed;
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        // Check if the collider is the player
         if (collider.tag != "Player")
         {
             return;
@@ -235,7 +227,6 @@ public class PlatformSwitchController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        // Check if the collider is the player
         if (collider.tag != "Player")
         {
             return;

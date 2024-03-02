@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,7 +49,7 @@ public class Asteroid : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets rotation direction randomly
+    /// Sets rotation direction randomly.
     /// </summary>
     private void SetRandomRotation()
     {
@@ -63,7 +62,7 @@ public class Asteroid : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets scale randomly
+    /// Sets scale randomly.
     /// </summary>
     private void SetRandomScale()
     {
@@ -72,7 +71,7 @@ public class Asteroid : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets horizontal shift randomly
+    /// Sets horizontal shift randomly.
     /// </summary>
     private void SetRandomHorizontalShift()
     {

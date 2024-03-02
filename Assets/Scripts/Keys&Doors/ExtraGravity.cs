@@ -1,32 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
-/// <summary>
-/// Applies extra gravity to the player and changes their color upon collission
-/// </summary>
 public class ExtraGravity : MonoBehaviour
 {
     [Tooltip("Player Controller script")]
-    public PlayerController playerController;
+    [SerializeField] private PlayerController playerController;
     [Tooltip("Text to be displayed when entering the zone")]
-    public GameObject textEnter;
+    [SerializeField] private GameObject textEnter;
     [Tooltip("Player movement speed modifier when in the zone")]
-    public float speedModifier = 0.5f;
+    [SerializeField] private float speedModifier = 0.5f;
 
     [Header("Player color when in the zone")]
     [Range(0,255)]
-    public int red;
+    [SerializeField] private int red;
     [Range(0,255)]
-    public int green;
+    [SerializeField] private int green;
     [Range(0,255)]
-    public int blue;
+    [SerializeField] private int blue;
     [Range(0,255)]
-    public int alpha;
+    [SerializeField] private int alpha;
 
     [Tooltip("UI Manager script")]
-    [SerializeField] UIManager interfaceManagerScript;
+    [SerializeField] private UIManager interfaceManagerScript;
 
     // Color values converted to 0-1 scale
     private float redPercent = 0;
@@ -34,7 +28,7 @@ public class ExtraGravity : MonoBehaviour
     private float bluePercent = 0;
     private float alphaPercent = 0;
 
-    void Start()
+    private void Start()
     {
         // Convert RGB values to 0-1 scale
         if (red != 0)
@@ -60,7 +54,7 @@ public class ExtraGravity : MonoBehaviour
         CheckPause();
     }
 
-    void OnTriggerEnter2D(Collider2D collission)
+    private void OnTriggerEnter2D(Collider2D collission)
     {
         if (collission.tag != "Player")
         {
@@ -80,7 +74,7 @@ public class ExtraGravity : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D collission)
+    private void OnTriggerExit2D(Collider2D collission)
     {   
         if (collission.tag != "Player")
         {
@@ -95,7 +89,7 @@ public class ExtraGravity : MonoBehaviour
     }
 
     /// <summary>
-    /// Turns the text off if game is paused
+    /// Turns the text off if game is paused.
     /// </summary>
     private void CheckPause()
     {
@@ -105,6 +99,10 @@ public class ExtraGravity : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Apply extra gravity effec to the player.
+    /// </summary>
+    /// <param name="collission"></param>
     private void ApplyExtraGravity(Collider2D collission)
     {
         // Save jump value and block jumping
@@ -115,7 +113,6 @@ public class ExtraGravity : MonoBehaviour
         playerController.defaultSpeed = playerController.movementSpeed;
         playerController.movementSpeed *= speedModifier;
 
-        // Get the sprite renderer
         Component[] spriteRenderers = collission.GetComponentsInChildren<SpriteRenderer>();
 
         foreach (SpriteRenderer spriteRenderer in spriteRenderers)

@@ -2,38 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Handles display of in-game text
-/// </summary>
 public class ColliderTextDisplay : MonoBehaviour
 {
     [Tooltip("Text to be displayed in the UI on collision with this collider")]
     public GameObject text;
-
     [Tooltip("Whether the display of the text should depend on a presence/lack thereof of a specific object")]
     public bool dependsOnTargetObject = false;
-
     [Tooltip("Object whose disappearance deactivates the text")]
     public GameObject targetObject;
-
-    [Tooltip("Objects to be destroyed when this text has been displayed")]
-    [SerializeField] private List<GameObject> objectsToDestroy = new List<GameObject>();
-
     [Tooltip("Player's health script")]
     public Health playerHealth;
-
     [Tooltip("UI Manager script")]
     public UIManager interfaceManagerScript;
-
     [Tooltip("How long should the text be displayed")]
     public float displayTime = 0.0f;
-
+    [Tooltip("Objects to be destroyed when this text has been displayed")]
+    [SerializeField] private List<GameObject> objectsToDestroy = new List<GameObject>();
     [Tooltip("Whether this text should be deactivated after being displayed; otherwise will be destroyed")]
     [SerializeField] private bool deactivateAfterDisplay = false;
 
-    private bool textWasDisplayed = false; // Controls if the text was already displayed
+    private bool textWasDisplayed = false;
 
-    void Update()
+    private void Update()
     {
         CheckPlayerLives();
         CheckPause();
@@ -58,7 +48,6 @@ public class ColliderTextDisplay : MonoBehaviour
 
         if (dependsOnTargetObject)
         {
-            // Don't display if the target object is not present
             if (targetObject == null)
             {
                 return;
@@ -73,7 +62,7 @@ public class ColliderTextDisplay : MonoBehaviour
     }
 
     /// <summary>
-    /// Makes sure player is still alive
+    /// Makes sure player is still alive.
     /// </summary>
     private void CheckPlayerLives()
     {
@@ -89,7 +78,7 @@ public class ColliderTextDisplay : MonoBehaviour
     }
 
     /// <summary>
-    /// Turns the text off if game is paused
+    /// Turns the text off if game is paused.
     /// </summary>
     private void CheckPause()
     {
@@ -101,10 +90,10 @@ public class ColliderTextDisplay : MonoBehaviour
     }
 
     /// <summary>
-    /// Displays the text for a specific period of time
+    /// Displays the text for a specific period of time.
     /// </summary>
     /// <returns></returns>
-    IEnumerator DisplayText()
+    private IEnumerator DisplayText()
     {
         yield return new WaitForSeconds(displayTime);
         text.SetActive(false);

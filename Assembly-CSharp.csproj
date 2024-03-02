@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4B96806D-EA4F-29C8-FFFC-08AB6B85CCB6}</ProjectGuid>
+    <ProjectGuid>{3FA4ED48-2116-E2ED-BF7E-2AC70CA58BBD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -783,11 +783,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{6A0664DA-5859-E2FF-4252-417FFE2AB2E8}</Project>
+      <Project>{FA1B2692-1F17-4F4D-748E-5FC5B2AB22C8}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
-      <Project>{DB800E13-6DBE-892A-5125-13CCDE40C9BA}</Project>
+      <Project>{06F1F04A-A517-3812-8189-2468D9EFF266}</Project>
       <Name>Unity.2D.Tilemap.Extras.Editor</Name>
     </ProjectReference>
   </ItemGroup>

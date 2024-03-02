@@ -1,25 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Handles movement activation/deactivation
-/// </summary>
 public class MovementActivator : MonoBehaviour
 {
     [Tooltip("Simple mover script attached to the target object")]
     [SerializeField] SimpleMover moverScript;
     [Tooltip("Movement on which axis should be affected")]
     [SerializeField] string axisToAffect = null;
+    [Tooltip("How to affect movement on the given axis")]
+    [SerializeField] MovementAction movementAction;
+    [Tooltip("Tag of the object that will trigger the action on contact")]
+    [SerializeField] string tagToLookFor;
+
     private enum MovementAction
     {
         activateMovement,
         deactivateMovement
     }
-    [Tooltip("How to affect movement on the given axis")]
-    [SerializeField] MovementAction movementAction;
-    [Tooltip("Tag of the object that will trigger the action on contact")]
-    [SerializeField] string tagToLookFor;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -42,7 +38,7 @@ public class MovementActivator : MonoBehaviour
     }
 
     /// <summary>
-    /// Activates/deactivates movement on the given axis
+    /// Activates/deactivates movement on the given axis.
     /// </summary>
     private void AffectMovement(string axis)
     {

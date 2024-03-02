@@ -1,53 +1,60 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Spawns object at the given position when triggered by another object
-/// </summary>
 public class ObjectSpawnerController : MonoBehaviour
 {
     [Header("General")]
     [Tooltip("Objects to spawn, picked randomly from the list")]
-    public List<GameObject> objectsToSpawn = new List<GameObject>();
-    public GameObject spawnPosition;
-    public string spawnActivatorTag;
-    public bool deactivateOnExit = false;
-    private enum SpawnMode
-    {
-        spawnEndless,
-        checkForCollisionsWithTarget
-    }
+    [SerializeField] private List<GameObject> objectsToSpawn = new List<GameObject>();
+    [Tooltip("How should the objects be spawned")]
     [SerializeField] private SpawnMode spawnMode;
+    [Tooltip("Position to spawn the objects at")]
+    [SerializeField] private GameObject spawnPosition;
+    [Tooltip("What should trigger the spawn")]
+    [SerializeField] private string spawnActivatorTag;
+    [Tooltip("Whether the spawning should be stopped when the activator exits the trigger")]
+    [SerializeField] private bool deactivateOnExit = false;
 
     [Header("Follow")]
     [Tooltip("Whether the spawner should follow a target")]
     [SerializeField] private bool followTarget = false;
     [Tooltip("Target object to follow")]
     [SerializeField] private GameObject targetToFollow;
+    [Tooltip("Which axis position of the target should this spawner follow")]
+    [SerializeField] private FollowMode followMode;
+
+    [Header("Endless spawn")]
+    [Tooltip("Whether the spawn should never end")]
+    [SerializeField] private bool spawnEndless = false;
+    [Tooltip("Time interval between spawns")]
+    [SerializeField] private float spawnInterval = 0.0f;
+
+    [Header("Spawn on contact")]
+    [Tooltip("Spawn trigger collider")]
+    [SerializeField] private GameObject targetSpawnControlCollider;
+    [Tooltip("Whether the number of spawns should be limited")]
+    [SerializeField] private bool limitSpawn = false;
+    [Tooltip("Max number of objects to spawn in a row")]
+    [SerializeField] private int maxObjects = 0;
+
+    [HideInInspector] public bool targetCollisionInTrigger = false;
+
+    private enum SpawnMode
+    {
+        spawnEndless,
+        checkForCollisionsWithTarget
+    }
+
     private enum FollowMode
     {
         xAxis,
         yAxis,
         zAxis
     }
-    [Tooltip("Which axis position of the target should this spawner follow")]
-    [SerializeField] private FollowMode followMode;
 
-    [Header("Endless spawn")]
-    [SerializeField] private bool spawnEndless = false;
-    [SerializeField] private float spawnInterval = 0.0f;
-    [HideInInspector] private bool shouldSpawn = false;
-    [HideInInspector] private bool timeToSpawn = false;
-
-    [Header("Spawn on contact")]
-    public GameObject targetSpawnControlCollider;
-    public bool limitSpawn = false;
-    [Tooltip("Max number of objects to spawn in a row")]
-    public int maxObjects = 0;
-
-    [HideInInspector] public bool targetCollisionInTrigger = false;
+    private bool shouldSpawn = false;
+    private bool timeToSpawn = false;
     private bool spawned = false;
 
     private void Update()
@@ -116,7 +123,7 @@ public class ObjectSpawnerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Follows the target
+    /// Follows the target.
     /// </summary>
     private void Follow()
     {
@@ -145,7 +152,7 @@ public class ObjectSpawnerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Spawns the given object
+    /// Spawns the object.
     /// </summary>
     private void SpawnObject()
     {
