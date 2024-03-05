@@ -55,6 +55,8 @@ When designing and implementing the project I stumbled upon several challenges:
 
 ## **Credits**
 
+Created by Wojciech Grodzicki.
+
 - Base scripts and assets by the [Michigan State University](https://www.coursera.org/learn/game-design-and-development-2)
 - Menu panels & buttons​ by Buch via [OpenGameArt](https://opengameart.org/content/sci-fi-user-interface-elements)
 - Menu background​ by [Deep-Fold](https://deep-fold.itch.io/space-background-generator)
