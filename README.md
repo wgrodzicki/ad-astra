@@ -59,7 +59,7 @@ When designing and implementing the project I stumbled upon several challenges:
 - Menu panels & buttons​ by Buch via [OpenGameArt](https://opengameart.org/content/sci-fi-user-interface-elements)
 - Menu background​ by [Deep-Fold](https://deep-fold.itch.io/space-background-generator)
 - Font​ by [Dan Zadorozny](http://www.iconian.com/)
-- explosion effect​ "Explosions" by helpcomputer via [OpenGameArt](https://opengameart.org/content/explosions-2?fbclid=IwAR0ja-GMWP5eNCLaMWP-7UVHwN5tIh7F7v-1GVzW5Zyfx-PSTt6p0eKg250) (CC BY 3.0)
+- Explosion effect​ "Explosions" by helpcomputer via [OpenGameArt](https://opengameart.org/content/explosions-2?fbclid=IwAR0ja-GMWP5eNCLaMWP-7UVHwN5tIh7F7v-1GVzW5Zyfx-PSTt6p0eKg250) (CC BY 3.0)
 - Walking enemy sound effect​ by FreeGiver via [Pixabay](https://pixabay.com/sound-effects/dragon-monstruo-criatura-gritando-rugido-14263/)
 - Flying enemy sound effect​ by JCI21 via [Pixabay](https://pixabay.com/sound-effects/spaceship-ambient-sfx-164114/)
 - Boss sound effect​ by [Pixabay](https://pixabay.com/sound-effects/dragon-hurt-47161/)
