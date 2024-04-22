@@ -8,7 +8,7 @@ public class HandwheelController : MonoBehaviour
     [Tooltip("Handwheel waypoint script")]
     [SerializeField] private WaypointMover handwheelMover;
     [Tooltip("Objects to turn off when using the handwheel")]
-    [SerializeField] private List<GameObject> objectsOff= new List<GameObject>();
+    [SerializeField] private List<GameObject> objectsOff = new List<GameObject>();
     [Tooltip("Objects to turn on when using the handwheel")]
     [SerializeField] private List<GameObject> objectsOn = new List<GameObject>();
     [Tooltip("Handwheel sound effect")]
@@ -28,7 +28,7 @@ public class HandwheelController : MonoBehaviour
     {
         if (!canMoveHandwheel)
         {
-            return; 
+            return;
         }
 
         // Wait for input
@@ -51,7 +51,7 @@ public class HandwheelController : MonoBehaviour
             return;
         }
 
-        foreach(GameObject targetObject in targetObjects)
+        foreach (GameObject targetObject in targetObjects)
         {
             if (activate)
             {
@@ -68,7 +68,7 @@ public class HandwheelController : MonoBehaviour
     {
         if (handwheelMover == null)
         {
-            return;          
+            return;
         }
 
         if (inputManager == null)

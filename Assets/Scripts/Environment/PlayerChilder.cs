@@ -83,6 +83,6 @@ public class PlayerChilder : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.gameObject.transform.SetParent(transform);
-        } 
+        }
     }
 }

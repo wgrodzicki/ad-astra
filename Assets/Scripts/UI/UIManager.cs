@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using System.Linq;
-using UnityEngine.EventSystems;
 
 /// <summary>
 /// A class which manages pages of UI elements
@@ -95,7 +95,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void CreateNavigationEffect()
     {
-         if (navigationEffect)
+        if (navigationEffect)
         {
             Instantiate(navigationEffect, transform.position, Quaternion.identity, null);
         }
@@ -128,7 +128,7 @@ public class UIManager : MonoBehaviour
         if (GameManager.instance != null && GameManager.instance.uiManager == null)
         {
             GameManager.instance.uiManager = this;
-        }     
+        }
     }
 
     /// <summary>
@@ -159,7 +159,7 @@ public class UIManager : MonoBehaviour
         if (eventSystem == null)
         {
             Debug.LogWarning("There is no event system in the scene but you are trying to use the UIManager. /n" +
-                "All UI in Unity requires an Event System to run. /n" + 
+                "All UI in Unity requires an Event System to run. /n" +
                 "You can add one by right clicking in hierarchy then selecting UI->EventSystem.");
         }
     }
@@ -215,12 +215,12 @@ public class UIManager : MonoBehaviour
                 // Otherwise, display the pause screen
                 else
                 {
-                    GoToPage(pausePageIndex);  
+                    GoToPage(pausePageIndex);
                 }
                 Time.timeScale = 0;
                 isPaused = true;
             }
-        }      
+        }
     }
 
     /// <summary>
@@ -233,7 +233,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void UpdateUI()
     {
-        foreach(UIelement uiElement in UIelements)
+        foreach (UIelement uiElement in UIelements)
         {
             uiElement.UpdateUI();
         }

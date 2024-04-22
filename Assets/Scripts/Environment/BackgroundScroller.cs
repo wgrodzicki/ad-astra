@@ -24,7 +24,7 @@ public class BackgroundScroller : MonoBehaviour
     /// Scrolls the background indefinitely.
     /// </summary>
     private void Scroll()
-    {   
+    {
         if (distanceCovered >= ((size.x / 2) - speed * Time.deltaTime)) // Adjust by speed and deltaTime to avoid breaches
         {
             // Immediately move the whole background to the starting position
@@ -33,7 +33,7 @@ public class BackgroundScroller : MonoBehaviour
         }
 
         // Keep moving the background
-        this.gameObject.transform.position -= new Vector3(speed * Time.deltaTime, 0.0f, 0.0f) ;
+        this.gameObject.transform.position -= new Vector3(speed * Time.deltaTime, 0.0f, 0.0f);
 
         distanceCovered += speed * Time.deltaTime;
     }

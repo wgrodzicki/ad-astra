@@ -22,7 +22,7 @@ public class WaypointMover : MonoBehaviour
     // The time at which movement is resumed
     private float timeToStartMovingAgain = 0f;
     // Whether or not the waypoint mover is stopped
-    [HideInInspector] 
+    [HideInInspector]
     public bool stopped = false;
 
     // The previous waypoint or the starting position
@@ -32,7 +32,7 @@ public class WaypointMover : MonoBehaviour
     // The index of the current Target ub tge waypoints list
     private int currentTargetIndex;
     // The current direction being travelled in
-    [HideInInspector] 
+    [HideInInspector]
     public Vector3 travelDirection;
 
     // Tilting behaviour controllers
@@ -138,10 +138,10 @@ public class WaypointMover : MonoBehaviour
         }
         else
         {
-            waypoints.Add(this.transform);        
+            waypoints.Add(this.transform);
             currentTarget = previousTarget;
         }
-        
+
         CalculateTravelInformation();
 
         initialRotation = this.gameObject.transform.rotation;
@@ -218,7 +218,7 @@ public class WaypointMover : MonoBehaviour
     /// Handles tilting behaviour
     /// </summary>
     void Tilt()
-    {   
+    {
         // Update tilting degree
         float tiltDegrees = tiltSpeed * Time.deltaTime;
 
@@ -226,7 +226,7 @@ public class WaypointMover : MonoBehaviour
         if (isTilted)
         {
             if (degreesToInitialRotation >= targetRotation)
-            {   
+            {
                 degreesToInitialRotation = 0;
                 this.gameObject.transform.rotation = initialRotation;
                 isTilted = false;
@@ -238,7 +238,7 @@ public class WaypointMover : MonoBehaviour
             this.gameObject.transform.Rotate(new Vector3(0.0f, 0.0f, -1.0f) * tiltDegrees, Space.Self);
             degreesToInitialRotation += tiltDegrees;
         }
-            
+
         // Check if not marked as tilted
         if (!isTilted)
         {
@@ -248,7 +248,7 @@ public class WaypointMover : MonoBehaviour
                 isTilted = true; // Mark as tilted to stop further tilting
                 return;
             }
-            
+
             // Otherwise go to the vertical position
             this.gameObject.transform.Rotate(new Vector3(0.0f, 0.0f, 1.0f) * tiltDegrees, Space.Self);
             degreesToTargetTilt += tiltDegrees;

@@ -10,13 +10,13 @@ public class ExtraGravity : MonoBehaviour
     [SerializeField] private float speedModifier = 0.5f;
 
     [Header("Player color when in the zone")]
-    [Range(0,255)]
+    [Range(0, 255)]
     [SerializeField] private int red;
-    [Range(0,255)]
+    [Range(0, 255)]
     [SerializeField] private int green;
-    [Range(0,255)]
+    [Range(0, 255)]
     [SerializeField] private int blue;
-    [Range(0,255)]
+    [Range(0, 255)]
     [SerializeField] private int alpha;
 
     [Tooltip("UI Manager script")]
@@ -60,7 +60,7 @@ public class ExtraGravity : MonoBehaviour
         {
             return;
         }
-        
+
         // Check if the player was in the zone
         if (!playerController.affectedByExtraGravity)
         {
@@ -75,12 +75,12 @@ public class ExtraGravity : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D collission)
-    {   
+    {
         if (collission.tag != "Player")
         {
             return;
         }
-        
+
         // Hide text if one exists
         if (textEnter != null)
         {

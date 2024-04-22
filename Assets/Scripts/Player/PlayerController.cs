@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
     // Whether the player is in the middle of a jump right now
     private bool jumping = false;
     #endregion
-    
+
     #region Player State Variables
     /// <summary>
     /// Enum used for categorizing the player's state
@@ -233,7 +233,7 @@ public class PlayerController : MonoBehaviour
             foreach (string layerName in passThroughLayers)
             {
                 Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(layerName), true);
-            } 
+            }
         }
         else
         {

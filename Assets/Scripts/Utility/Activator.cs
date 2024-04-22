@@ -28,7 +28,7 @@ public class Activator : MonoBehaviour
 
         AffectObjects();
     }
-    
+
     /// <summary>
     /// Activates/deactivates the given object.
     /// </summary>
@@ -36,7 +36,7 @@ public class Activator : MonoBehaviour
     {
         if (objectsAction == ObjectsAction.activateObjects)
         {
-            foreach(GameObject targetObject in targetObjects)
+            foreach (GameObject targetObject in targetObjects)
             {
                 if (targetObject != null)
                     targetObject.SetActive(true);

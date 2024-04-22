@@ -170,7 +170,7 @@ public class SimpleMover : MonoBehaviour
             if (randomIntervalY)
             {
                 intervalY = Random.Range(0.1f, intervalY);
-            } 
+            }
             // Delay Y
             delayY = Mathf.Abs(delayY);
             if (randomDelayY)
@@ -252,8 +252,8 @@ public class SimpleMover : MonoBehaviour
     private IEnumerator WaitBeforeMove(float delay, string axis)
     {
         yield return new WaitForSeconds(delay);
-           
-        switch(axis)
+
+        switch (axis)
         {
             case "X":
                 startX = true;
@@ -322,7 +322,7 @@ public class SimpleMover : MonoBehaviour
                 {
                     HandleNegativePosition(currentPosition, initialPosition);
                 }
-                
+
                 if (currentPosition < targetPosition && currentPosition > initialPosition)
                 {
                     directionChanged = false; // Unlock direction change

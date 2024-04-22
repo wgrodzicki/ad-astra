@@ -44,7 +44,7 @@ public class Asteroid : MonoBehaviour
         {
             Destroy(collider.gameObject);
         }
-        
+
         Destroy(this.gameObject);
     }
 

@@ -26,7 +26,7 @@ public class PlatformSwitchController : MonoBehaviour
     }
 
     // Switch length
-    private float length = 0.0f;    
+    private float length = 0.0f;
 
     // How far has the switch moved
     private float distanceDown = 0.0f;
@@ -53,7 +53,7 @@ public class PlatformSwitchController : MonoBehaviour
         HideSwitch();
         ShowSwitch();
     }
-    
+
     /// <summary>
     /// Checks for user input (action key).
     /// </summary>
@@ -216,7 +216,7 @@ public class PlatformSwitchController : MonoBehaviour
         {
             return;
         }
-                
+
         if (platformMoverScript == null)
         {
             return;

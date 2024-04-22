@@ -18,7 +18,7 @@ public class BossHeartController : MonoBehaviour
 
     private void Start()
     {
-        bossAuras = boss.GetComponent<BossController>().bossAuras;        
+        bossAuras = boss.GetComponent<BossController>().bossAuras;
     }
 
     private void Update()

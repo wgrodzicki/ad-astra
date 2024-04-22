@@ -26,6 +26,6 @@ public class UIPage : MonoBehaviour
             GameManager.instance.uiManager.eventSystem.SetSelectedGameObject(null);
             GameManager.instance.uiManager.eventSystem.SetSelectedGameObject(defaultSelected);
         }
-        
+
     }
 }

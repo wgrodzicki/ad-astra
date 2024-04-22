@@ -95,7 +95,7 @@ public class ObjectSpawnerController : MonoBehaviour
                 return;
             }
         }
-        
+
         SpawnObject();
     }
 

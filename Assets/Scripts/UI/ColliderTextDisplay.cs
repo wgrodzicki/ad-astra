@@ -100,7 +100,7 @@ public class ColliderTextDisplay : MonoBehaviour
 
         if (objectsToDestroy.Count > 0)
         {
-            foreach (GameObject objectToDestroy in  objectsToDestroy)
+            foreach (GameObject objectToDestroy in objectsToDestroy)
             {
                 Destroy(objectToDestroy);
             }

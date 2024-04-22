@@ -11,7 +11,7 @@ public class CollisionDetector : MonoBehaviour
         if (collision.tag == tagToLookFor)
         {
             isColliding = true;
-        }   
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -19,6 +19,6 @@ public class CollisionDetector : MonoBehaviour
         if (collision.tag == tagToLookFor)
         {
             isColliding = false;
-        } 
+        }
     }
 }

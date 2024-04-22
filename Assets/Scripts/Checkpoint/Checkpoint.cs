@@ -16,7 +16,7 @@ public class Checkpoint : MonoBehaviour
     public string animatorActiveParameter = "isActive";
     [Tooltip("The effect to create when activating the checkpoint")]
     public GameObject checkpointActivationEffect;
-    
+
     // (WG)
     [Tooltip("Whether this checkpoint should act as an actual checkpoint and respawn the player")]
     public bool actsAsCheckpoint = true;

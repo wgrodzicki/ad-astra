@@ -11,22 +11,22 @@ public class MovableSquareShifter : MonoBehaviour
     [SerializeField] private float timeToNextShift = 0.0f;
     [Tooltip("How many collisions should be allowed when raycasting to check if there is enough space for the shift")]
     [SerializeField] private int collisionsAllowed = 4;
-    
+
     // Collider data from the trigger
     private Collider2D colliderToShift;
-    
+
     // Whether shifting should be allowed at all (when triggered)
     private bool canShift = false;
-    
+
     // Whether another shift in a row should be allowed (while still in the trigger)
     private bool canShiftAgain = false;
-    
+
     private void Update()
     {
         Shift();
     }
 
-    private void OnTriggerEnter2D (Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         if (!collider.GetComponent<PlayerController>())
         {
@@ -38,7 +38,7 @@ public class MovableSquareShifter : MonoBehaviour
         canShiftAgain = true;
     }
 
-    private void OnTriggerExit2D (Collider2D collider)
+    private void OnTriggerExit2D(Collider2D collider)
     {
         if (!collider.GetComponent<PlayerController>())
         {
@@ -92,7 +92,7 @@ public class MovableSquareShifter : MonoBehaviour
                     StartCoroutine(WaitForNextShift());
                 }
             }
-        }        
+        }
         // Check if player is on the right
         else if (this.gameObject.transform.position.x < colliderToShift.gameObject.transform.position.x)
         {
@@ -109,7 +109,7 @@ public class MovableSquareShifter : MonoBehaviour
                     // Turn the player by 180 degrees
                     SpriteRenderer playerSprite = colliderToShift.gameObject.GetComponentInChildren<SpriteRenderer>();
                     playerSprite.flipX = false;
-                    
+
                     // Wait before another shift is allowed
                     canShiftAgain = false;
                     StartCoroutine(WaitForNextShift());

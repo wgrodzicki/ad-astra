@@ -23,16 +23,16 @@ public class MovementActivator : MonoBehaviour
         {
             return;
         }
-        
+
         if (string.IsNullOrEmpty(tagToLookFor))
         {
             return;
         }
 
-        if (collider.tag !=  tagToLookFor)
+        if (collider.tag != tagToLookFor)
         {
             return;
-        }    
+        }
 
         AffectMovement(axisToAffect);
     }

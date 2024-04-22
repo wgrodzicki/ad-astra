@@ -25,7 +25,7 @@ public class NormalGravity : MonoBehaviour
         if (playerController.affectedByExtraGravity)
         {
             RestoreNormalGravity(collission);
-            
+
             // Display text if one exists
             if (textExit != null)
             {
@@ -35,12 +35,12 @@ public class NormalGravity : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D collission)
-    {   
+    {
         if (collission.tag != "Player")
         {
             return;
         }
-        
+
         // Hide text if one exists
         if (textExit != null)
         {
@@ -67,7 +67,7 @@ public class NormalGravity : MonoBehaviour
     {
         playerController.allowedJumps = playerController.defaultJumpsAllowed;
         playerController.movementSpeed = playerController.defaultSpeed;
-        
+
         Component[] spriteRenderers = collission.GetComponentsInChildren<SpriteRenderer>();
 
         foreach (SpriteRenderer spriteRenderer in spriteRenderers)

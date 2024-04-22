@@ -65,7 +65,7 @@ public class Health : MonoBehaviour
 
     // The time to respawn at
     private float respawnTime;
-    
+
     /// <summary>
     /// Description:
     /// Checks to see if the player should be respawned yet and only respawns them if the alloted time has passed
@@ -309,7 +309,7 @@ public class Health : MonoBehaviour
         {
             return;
         }
-        
+
         // Check if there is only basic loot to be dropped
         if (extraLoot == null)
         {
@@ -369,7 +369,7 @@ public class Health : MonoBehaviour
                 else
                 {
                     respawnTime = Time.time + respawnWaitTime;
-                } 
+                }
             }
             else
             {
@@ -383,7 +383,7 @@ public class Health : MonoBehaviour
                 }
                 GameOver();
             }
-            
+
         }
         else
         {
