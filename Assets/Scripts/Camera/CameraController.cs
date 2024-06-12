@@ -100,7 +100,7 @@ public class CameraController : MonoBehaviour
     /// </summary>
     private void SetUpInputManager()
     {
-        inputManager = InputManager.instance;
+        inputManager = InputManager.Instance;
         if (inputManager == null)
         {
             Debug.LogError("There is no InputManager set up in the scene for the CamaeraController to read from");

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,7 +11,7 @@ using UnityEngine.UI;
 public class InputManager : MonoBehaviour
 {
     // A global instance for scripts to reference
-    public static InputManager instance;
+    public static InputManager Instance;
 
     /// <summary>
     /// Description:
@@ -24,9 +25,9 @@ public class InputManager : MonoBehaviour
     {
         ResetValuesToDefault();
         // Set up the instance of this
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
         else
         {
@@ -98,7 +99,7 @@ public class InputManager : MonoBehaviour
     {
         jumpStarted = !callbackContext.canceled;
         jumpHeld = !callbackContext.canceled;
-        if (InputManager.instance.isActiveAndEnabled)
+        if (InputManager.Instance.isActiveAndEnabled)
         {
             StartCoroutine("ResetJumpStart");
         }
@@ -141,6 +142,10 @@ public class InputManager : MonoBehaviour
     [Tooltip("The state of the special action button")]
     public float specialActionButton = 0;
 
+    //!!
+    public Action OnUseButtonPressed;
+    //!!
+
     /// <summary>
     /// Description:
     /// Collects special action button input
@@ -153,6 +158,7 @@ public class InputManager : MonoBehaviour
     public void GetSpecialActionInput(InputAction.CallbackContext callbackContext)
     {
         specialActionButton = callbackContext.ReadValue<float>();
+        OnUseButtonPressed?.Invoke();
     }
 
     [Header("Mouse Input")]

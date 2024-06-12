@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
 /// This class handles moving the attached game object between waypoints
 /// </summary>
-public class WaypointMover : MonoBehaviour
+public class WaypointMover : SwitchableObject
 {
     [Header("Settings")]
     [Tooltip("A list of transforms to move between")]
@@ -43,6 +42,12 @@ public class WaypointMover : MonoBehaviour
     private Quaternion initialRotation;
     private float degreesToTargetTilt = 0.0f;
     private float degreesToInitialRotation = 0.0f;
+
+    public override void Switch(bool value)
+    {
+        base.Switch(value);
+        shouldTilt = value;
+    }
 
     /// <summary>
     /// Description:
@@ -231,6 +236,7 @@ public class WaypointMover : MonoBehaviour
                 this.gameObject.transform.rotation = initialRotation;
                 isTilted = false;
                 shouldTilt = false;
+                IsSwitching = false;
                 return;
             }
 
