@@ -1,8 +1,11 @@
 # **Ad Astra**
 
-"Ad Astra" is a 2D platformer with a short storyline and some puzzle-like mechanics. You can play it [here](https://wgrodzicki.itch.io/ad-astra).
+> [!NOTE]
+> This repo contains the source code of my "Ad Astra" game available [here](https://wgrodzicki.itch.io/ad-astra).
 
-![Cover](Assets/Art/Other/ad-astra-cover.png)
+"Ad Astra" is a 2D platformer with a short storyline and some puzzle-like mechanics.
+
+![Cover](Images/ad-astra-cover.png)
 
 ## **Technologies used**
 
@@ -18,25 +21,25 @@ In a far future humanity is forced to look for other planets suitable for life. 
 
 The game consists of 3 different levels. Each one is preceded by a "Star Wars-like" introduction about the progress of the story and your main goal. Every level offers a unique challenge, requiring not only agility, but also some logical thinking and puzzle-solving skills.
 
-![Level 3](Assets/Art/Other/screenshot3.png)
+![Level 3](Images/screenshot3.png)
 
 #### Interactivity
 
 To make the gameplay more interesting I included interactive environment elements that you can (and should) use to your advantage, such as movable boxes, switches or destroyable platforms. I also added a looting system to enemies that drop useful pick-ups in a random fashion, depending on the type and strength of the enemy.
 
-![Movable boxes and switches](Assets/Art/Other/screenshot1.png)
+![Movable boxes and switches](Images/screenshot1.png)
 
 #### Puzzle mechanics
 
 I designed and implemented a set of mechanics that strip the main character of his core abilities and force you to think outside the box. You have to find a way out of a high gravity chamber by manipulating the environment and appropriately timing your actions, without relying on combat or usual movement.
 
-![High gravity zone](Assets/Art/Other/screenshot2.png)
+![High gravity zone](Images/screenshot2.png)
 
 #### Boss fight
 
 At the end of the last level you will have to defeat the final boss. But this encounter is not an obvious one - I implemented a system that requires you to gradually weaken the enemy before you can face him in direct combat. The final part of the game also involves a scripted event that keeps you engaged until the last seconds of the gameplay.
 
-![Final boss](Assets/Art/Other/screenshot4.png)
+![Final boss](Images/screenshot4.png)
 
 ## **How to play?**
 
@@ -57,7 +60,7 @@ When designing and implementing the project I stumbled upon several challenges:
 
 Created by Wojciech Grodzicki.
 
-- Initial project template by the [Michigan State University](https://www.coursera.org/learn/game-design-and-development-2)
+- Initial project template (base assets and scripts) by the [Michigan State University](https://www.coursera.org/learn/game-design-and-development-2)
 - Menu panels & buttons​ by Buch via [OpenGameArt](https://opengameart.org/content/sci-fi-user-interface-elements)
 - Menu background​ by [Deep-Fold](https://deep-fold.itch.io/space-background-generator)
 - Font​ by [Dan Zadorozny](http://www.iconian.com/)
